@@ -5,5 +5,5 @@ build:
 .PHONY: build
 
 dev: build
-	docker run -u root -it $(CONTAINER_NAME) /bin/bash
+	docker run -u root -it -v /var/run/docker.sock:/var/run/docker.sock $(CONTAINER_NAME) /bin/bash
 .PHONY: dev
